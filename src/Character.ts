@@ -37,7 +37,7 @@ class Character implements Fighter {
   get energy():Energy {
     return { ...this._energy };
   }
-
+ 
   get lifePoints():number {
     return this._lifePoints;
   }
@@ -79,16 +79,17 @@ class Character implements Fighter {
 
   constructor(private _name:string) {
     this._name = _name;
-    this._strength = randomIntBetween(1, 10);
-    this._defense = randomIntBetween(1, 10);
+    this._strength = randomIntBetween(3, 10);
+    this._defense = randomIntBetween(1, 4);
     this._dexterity = randomIntBetween(1, 10);
-    this._race = new Elf(_name, this._dexterity, 0);
+    this._race = new Elf(_name, this._dexterity);
     this._archetype = new Mage(_name);
     this._maxLifePoints = this._race.maxLifePoints / 2;
     this._lifePoints = this._maxLifePoints;
     this._energy = { type_: this._archetype.energyType,
       amount: 
-      randomIntBetween(1, 10) };
+      randomIntBetween(1, 10), 
+    };
   }
 }
 
