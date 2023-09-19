@@ -18,13 +18,15 @@ class Monster implements SimpleFighter {
  
   receiveDamage(attackPoints: number): number {
     const damage = this._lifePoints - attackPoints;
-    if (this.lifePoints - damage <= 0) {
-      this._lifePoints = -1;
+
+    if (damage <= 0) {
+      this._lifePoints = -1; 
     } else {
       this._lifePoints -= damage;
     }
-    
-    return this.lifePoints;
+
+    return this._lifePoints;
+   
   }
 
   constructor() {

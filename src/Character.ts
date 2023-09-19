@@ -59,7 +59,7 @@ class Character implements Fighter {
 
   levelUp(): void {
     this._maxLifePoints = this.secureLifePointsUpdate(3);
-    this._strength += randomIntBetween(1, 10);
+    this._strength += randomIntBetween(5, 10);
     this._defense += randomIntBetween(1, 10);
     this._dexterity += randomIntBetween(1, 10);
     this._lifePoints = this._maxLifePoints;
