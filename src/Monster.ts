@@ -26,7 +26,6 @@ class Monster implements SimpleFighter {
     }
 
     return this._lifePoints;
-   
   }
 
   constructor() {
